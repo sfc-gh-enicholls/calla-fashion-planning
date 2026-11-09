@@ -1,3 +1,3 @@
-:HL["/calla-fashion-planning/_next/static/chunks/970b09ea74cae1ee.css","style"]
-:HL["/calla-fashion-planning/_next/static/chunks/5e6c930cc74ddb04.css","style"]
-0:{"buildId":"beuXs_2nfKhfZNNcL9AUl","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+:HL["/calla-fashion-planning/_next/static/chunks/c37338447bf66b09.css","style"]
+:HL["/calla-fashion-planning/_next/static/chunks/48301c230a9b3a0b.css","style"]
+0:{"buildId":"ZNp7cXX0HuIJ62uO10ivM","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

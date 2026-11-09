@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Calla host theme — the app's original look, preserved as a skin.
+   Activate with "host": "calla" in src/brand/active.json.
+
+   Every value is a port of the pre-token-system src/styles/tokens.css, so the
+   Calla host renders identically to the app before the refactor. That is a
+   faithful skin, not a brand-compliant one: it keeps Calla's own status
+   colours and shadows, which the Snowflake host does not use.
+
+   Block 1 is the skill's host vocabulary. Block 2 is host extensions: tokens
+   Calla's components read that the skill has no equivalent for. Type tokens
+   are mode-independent, so a mode switch cannot reflow the page.
+   ========================================================================== */
+
+/* ── Light ─────────────────────────────────────────────────────────────── */
+[data-host="calla"]{
+  color-scheme:light;
+  --canvas:#FAFAFA; --surface:#FFFFFF; --surface-2:#F7F7F7;
+  --ink:#11212D; --ink-2:#666666; --ink-3:#999999;
+  --line:#ECECEC; --line-strong:#E0E0E0;
+  --nav-bg:#F2F2F2; --nav-ink:#11212D; --nav-sec:#999999;
+  --nav-active-bg:rgba(41,181,232,.08); --nav-active-ink:#11212D; --nav-active-bar:#29B5E8;
+  --band-bg:#11212D; --band-ink:#FAFAFA; --band-hl:#29B5E8; --band-border:transparent; --band-dot:#29B5E8;
+  --action:#29B5E8; --on-action:#FFFFFF;
+  --crit:#C4564A; --crit-bg:rgba(196,86,74,.10); --risk:#B8860B; --risk-bg:rgba(184,134,11,.10);
+  --ok:#1B9AAA; --ok-bg:rgba(27,154,170,.10); --st-ink:#11212D;
+  --series-1:#29B5E8; --series-2:#BBBBBB; --series-3:#1B9AAA; --shade:rgba(41,181,232,.06);
+  --title-ink:#11212D; --label-ink:#999999;
+  --step-done-bg:rgba(17,33,45,.08); --step-done-ink:#11212D;
+  --step-cur-bg:#11212D; --step-cur-ink:#FAFAFA; --step-cur-border:#11212D;
+  --step-fut-border:rgba(17,33,45,.3); --step-fut-ink:#11212D;
+
+  /* Host extensions — colour */
+  --bg-hover:#F7F7F7; --bg-elevated:#FFFFFF; --border-subtle:#F5F5F5; --text-muted:#CCCCCC;
+  --accent-muted:#1B9AAA; --accent-subtle:rgba(41,181,232,.08); --accent-hover:#3DC2F0;
+  --shadow-card:0 1px 3px rgba(0,0,0,.04); --shadow-elevated:0 4px 16px rgba(0,0,0,.08);
+  --chart-grid:#F0F0F0; --chart-axis-text:#BBBBBB; --chart-series-4:#999999; --chart-series-5:#B8860B;
+  --chart-band:rgba(41,181,232,.06);
+  --table-stripe:#FCFCFC; --table-hover:#F7F7F7;
+  --skeleton-base:#F0F0F0; --skeleton-shimmer:#E5E5E5;
+  --accent-bar-bg:linear-gradient(90deg,var(--action),transparent);
+  --bar-fill-bg:linear-gradient(90deg,var(--action),var(--accent-muted));
+
+  /* Type — not mode-dependent. Inter and Playfair come from next/font
+     (--nf-sans, --nf-display on <html>). */
+  --band-deco:block;
+  --ui-font:var(--nf-sans), ui-sans-serif, system-ui, sans-serif;
+  --display:var(--nf-display), Georgia, serif;
+  --display-weight:500; --display-case:none; --display-track:2px;
+  --num-font:var(--nf-display), Georgia, serif; --num-weight:500;
+  --strong-weight:600; --th-weight:500;
+  --title-weight:500; --title-case:uppercase; --title-track:3px; --title-size:10px;
+  --label-weight:500; --label-track:3px; --label-size:10px;
+  --wordmark-track:2px;
+  --cover-size:52px; --cover-lh:.84; --cover-stack:block;
+  /* Host extensions — type */
+  --heading-font:var(--nf-display), var(--nf-sans), ui-sans-serif, system-ui, sans-serif;
+  --heading-track:-0.02em;
+  --th-size:9px; --th-case:uppercase; --th-track:1.5px;
+  --btn-size:11px; --btn-case:uppercase; --btn-track:2px; --btn-weight:600;
+  --chip-size:9px; --chip-case:uppercase; --chip-track:1.5px; --chip-weight:500;
+  --brand-title-track:1.5px;
+}
+
+/* ── Dark: colour tokens only ──────────────────────────────────────────── */
+[data-host="calla"][data-mode="dark"]{
+  color-scheme:dark;
+  --canvas:#0A0A0A; --surface:#111111; --surface-2:#151515;
+  --ink:#E8E4DF; --ink-2:#999999; --ink-3:#555555;
+  --line:#1A1A1A; --line-strong:#2A2A2A;
+  --nav-bg:#050505; --nav-ink:#E8E4DF; --nav-sec:#555555;
+  --nav-active-bg:#151515; --nav-active-ink:#E8E4DF; --nav-active-bar:#C8B89A;
+  --band-bg:#1A1612; --band-ink:#C8B89A; --band-hl:#E8E4DF; --band-border:transparent; --band-dot:#C8B89A;
+  --action:#C8B89A; --on-action:#0A0A0A;
+  --crit:#A0522D; --crit-bg:rgba(160,82,45,.15); --risk:#C4956A; --risk-bg:rgba(196,149,106,.12);
+  --ok:#C8B89A; --ok-bg:rgba(200,184,154,.12); --st-ink:#E8E4DF;
+  --series-1:#C8B89A; --series-2:#555555; --series-3:#8B7355; --shade:rgba(200,184,154,.08);
+  --title-ink:#E8E4DF; --label-ink:#555555;
+  --step-done-bg:rgba(200,184,154,.12); --step-done-ink:#E8E4DF;
+  --step-cur-bg:#C8B89A; --step-cur-ink:#0A0A0A; --step-cur-border:#C8B89A;
+  --step-fut-border:rgba(200,184,154,.4); --step-fut-ink:#C8B89A;
+
+  --bg-hover:#151515; --bg-elevated:#1A1A1A; --border-subtle:#0F0F0F; --text-muted:#333333;
+  --accent-muted:#8B7355; --accent-subtle:rgba(200,184,154,.12); --accent-hover:#D4C8AE;
+  --shadow-card:none; --shadow-elevated:0 8px 32px rgba(0,0,0,.6);
+  --chart-grid:#1A1A1A; --chart-axis-text:#555555; --chart-series-4:#444444; --chart-series-5:#C4956A;
+  --chart-band:rgba(200,184,154,.08);
+  --table-stripe:#0C0C0C; --table-hover:#151515;
+  --skeleton-base:#111111; --skeleton-shimmer:#1A1A1A;
+}
